@@ -4,7 +4,7 @@ Scripts for using [Drafts](https://getdrafts.com) with an external text editor.
 
 Drafts stores its notes (drafts) in a database, so they can't be opened in an external editor directly. These scripts offer two possible workarounds.
 
-The first option is a Drafts action which writes a file, opens the file in a specified editor, waits for the editor to quit, and reads back the edited file. This action is blocking in the sense that no other Draft actions can be invoked while the external editor is open, so is best for quick edits.
+The first option is a Drafts action (`edit-in-external-editor`) which writes a file, opens the file in a specified editor, waits for the editor to quit, and reads back the edited file. This action is blocking in the sense that no other Draft actions can be invoked while the external editor is open, so is best for quick edits.
 
 The second option is more involved and uses several actions as well as a macOS "shortcut". It works like this:
 
