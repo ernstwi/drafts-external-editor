@@ -14,3 +14,9 @@ The second option is more involved and uses several actions as well as a macOS "
 4. Finally, when you are done, invoke the `delete-proxy-file` action.
 
 To simplify this workflow there is also an action `make-proxy-file-and-edit-in-external-editor` whose purpose should be clear from the name.
+
+You'd probably want to set up your editor so that step 3 is handled automatically. For example with Vim you could add the following autocommand:
+
+```
+autocmd! BufWritePost <your proxy file directory>/* silent !shortcuts run drafts-proxy &
+```
