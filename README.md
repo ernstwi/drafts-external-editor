@@ -20,3 +20,10 @@ You'd probably want to set up your editor so that step 3 is handled automaticall
 ```
 autocmd! BufWritePost <your proxy file directory>/* silent !shortcuts run drafts-proxy &
 ```
+
+Actions are available from the Drafts directory:
+
+- [Edit in External Editor](https://directory.getdrafts.com/a/2Cp)
+- [Make Proxy File](https://directory.getdrafts.com/a/2Cq)
+- [Delete Proxy File](https://directory.getdrafts.com/a/2Cr)
+- [Make Proxy File and Edit in External Editor](https://directory.getdrafts.com/a/2Cs)
