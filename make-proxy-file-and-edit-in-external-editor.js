@@ -1,12 +1,8 @@
-let EDITOR = '', TERM_INIT = '';
+let EDITOR = '';
 
 // ---- CONFIGURATION ----
 // Set EDITOR to the application (note: not shell command) you want to use.
 // Below are some examples.
-//
-// TERM_INIT is used for setup of the shell used to open the application. I
-// found this was necessary for Neovim Qt to function properly but it should
-// generally not be needed.
 
 // TextEdit
 EDITOR = 'TextEdit'
@@ -16,7 +12,6 @@ EDITOR = 'TextEdit'
 
 // Neovim Qt
 // EDITOR = 'nvim-qt'
-// TERM_INIT = 'export LC_CTYPE="en_US.UTF-8"'
 // -----------------------
 
 function bash(script) {
@@ -39,7 +34,7 @@ function bash(script) {
     let file = `${fm.basePath}/${draft.uuid}.md`;
 
     try {
-        bash(`${TERM_INIT}\nopen -a "${EDITOR}" ${file}`);
+        bash(`open -a "${EDITOR}" ${file}`);
     } catch (e) {
         alert(e);
         return;
