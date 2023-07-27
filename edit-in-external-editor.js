@@ -34,10 +34,10 @@ function bash(script) {
     let file = `${fm.basePath}/${draft.uuid}.md`;
 
     try {
-        bash(`open -n -W -a "${EDITOR}" ${file}`);
+        bash(`open -n -W -a "${EDITOR}" "${file}"`);
         draft.content = fm.readString(`/${draft.uuid}.md`);
         draft.update();
-        bash(`rm ${file}`);
+        bash(`rm "${file}"`);
     } catch (e) {
         alert(e);
         return;
